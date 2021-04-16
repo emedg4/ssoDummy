@@ -9,6 +9,7 @@ export class SsoController {
 
     @Post('login')
     async login(@Request()req) {
+        console.log(req.body)
         if(req.body.logonId == "correcto" && req.body.password == "correcto"){
             const commonResponse: Object = await this.ssoService.getUser();
             console.log(commonResponse)
