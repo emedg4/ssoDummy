@@ -1,0 +1,8 @@
+# version: '3'
+# services:
+#   api:
+#     container_name: ssodummy
+#     ports:
+#       - "8001:3000"
+#     restart: always
+#     build: .
