@@ -8,9 +8,9 @@ export class SsoController {
                  private readonly ssoService:SsoService){}
 
     @Post('login')
-    async login(@Request()req) {
+    async login(@Request() req) {
         console.log
-        if(req.body.logonId == "correo@coppel.com" && req.body.password == "password"){
+        if(req.body.logonId == "correo@empresa.com" && req.body.password == "password"){
             const commonResponse: Object = await this.ssoService.getUser();
             console.log(commonResponse)
             return commonResponse;
@@ -22,7 +22,7 @@ export class SsoController {
         }
     }
     @Get('validate')
-    async validate(@Headers()Headers) {
+    async validate(@Headers() Headers) {
         if(Headers.authorization == 'dqwdqw123534512312rthgrtyhjtryyu56'){
             const response: Object = this.ssoService.validate();
             console.log(response)

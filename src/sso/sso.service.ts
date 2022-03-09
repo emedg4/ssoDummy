@@ -50,7 +50,7 @@ export class SsoService {
             },
             "data":{
                 "appId": null,
-                "email":"mail@enterprise.com",
+                "email":"correo@empresa.com",
                 "user": 12345678,
                 "userType":0,
                 "deviceId":0,
